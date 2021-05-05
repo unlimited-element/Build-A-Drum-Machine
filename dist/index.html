@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+
+<script>
+
+// drum scripts below
+// words to display on drum display cards
+let play = (str) => {
+  if (str === "q" || str === "Q") {
+    document.getElementById('display').innerHTML = "Qappow";
+  } else
+  if (str === "w" || str === "W") {
+    document.getElementById('display').innerHTML = "Wappow";
+  } else
+  if (str === "e" || str === "E") {
+    document.getElementById('display').innerHTML = "Eappow";
+  } else
+  if (str === "a" || str === "A") {
+    document.getElementById('display').innerHTML = "Aappow";
+  } else
+  if (str === "s" || str === "S") {
+    document.getElementById('display').innerHTML = "Sappow";
+  } else
+  if (str === "d" || str === "D") {
+    document.getElementById('display').innerHTML = "Dappow";
+  } else
+  if (str === "z" || str === "Z") {
+    document.getElementById('display').innerHTML = "Zappow";
+  } else
+  if (str === "x" || str === "X") {
+    document.getElementById('display').innerHTML = "Xappow";
+  } else
+  if (str === "c" || str === "C") {
+    document.getElementById('display').innerHTML = "Cappow";
+  }
+  var audio = document.getElementById(str);
+  audio.play();
+}
+
+// Once a key is pressed, drum is played, and string is above is displayed
+window.document.onkeyup = (event) => {
+  if (event.key === "q" || event.key === "Q") {
+    play("Q");
+  } else
+  if (event.key === "w" || event.key === "W") {
+    play("W");
+  } else
+  if (event.key === "e" || event.key === "E") {
+    play("E");
+  } else
+  if (event.key === "a" || event.key === "A") {
+    play("A");
+  } else
+  if (event.key === "s" || event.key === "S") {
+    play("S");
+  } else
+  if (event.key === "d" || event.key === "D") {
+    play("D");
+  } else
+  if (event.key === "z" || event.key === "Z") {
+    play("Z");
+  } else
+  if (event.key === "x" || event.key === "X") {
+    play("X");
+  } else
+  if (event.key === "c" || event.key === "C") {
+    play("C");
+  }
+}
+
+</script>
+</head>
+  <body>
+
+    <div id="drum-machine" class="container p-3 text-center">
+        <div class="card bg-primary text-white" style="width: 17rem;">
+          <div class="card-body" id="display">
+            <h5 class="card-title text-center">Drum Machine</h5>
+            <p class="card-text text-center">Click to play.</p>
+          </div>
+        </div>
+
+        <div id="all-buttons" class="p-3 text-center">
+        <button class="drum-pad" id="d1" onclick=play("Q")>
+          Q
+          <audio src="Drums/707Tom.wav" id="Q" class="clip"></audio>
+          </button>
+        <button class="drum-pad" id="d2" onclick=play("W")>
+          W
+          <audio id="W" class="clip" source src="Drums/808Tom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d3" onclick=play("E")>
+          E
+          <audio id="E" class="clip" source src="Drums/909Tom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d4" onclick=play("A")>
+          A
+        <audio  id="A" class="clip" source src="Drums/AlmaTom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d5" onclick=play("S")>
+          S
+        <audio  id="S" class="clip" source src="Drums/ChromoTom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d6" onclick=play("D")>
+          D
+        <audio  id="D" class="clip" source src="Drums/EkitTom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d7" onclick=play("Z")>
+          Z
+        <audio  id="Z" class="clip" source src="Drums/ElectroTom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d8" onclick=play("X")>
+          X
+        <audio  id="X" class="clip" source src="Drums/JungTom.wav"></audio>
+          </button>
+        <button class="drum-pad" id="d9" onclick=play("C")>
+          C
+        <audio  id="C" class="clip" source src="Drums/LinnTom.wav"></audio>
+          </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
