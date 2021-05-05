@@ -1,4 +1,4 @@
-#User Stories
+# User Stories
 
 User Story #1: I should be able to see an outer container with a corresponding id="drum-machine" that contains all other elements.
 
